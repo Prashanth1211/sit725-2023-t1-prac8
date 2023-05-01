@@ -2,7 +2,7 @@ let model = require('../model/model');
 
 const createBeach = (req,res) => {
     let cat = req.body;
-    model.insertCat(cat, (err, result) => {
+    model.insertBeach(cat, (err, result) => {
         if (err) {
             res.json({statusCode: 400, message: err});
         } else {
@@ -12,7 +12,7 @@ const createBeach = (req,res) => {
 }
 
 const getAllBeachs = (req,res) => {
-    model.getAllCats((err, result) => {
+    model.getAllBeachs((err, result) => {
         if (err) {
             res.json({statusCode: 400, message: err});
         } else {
