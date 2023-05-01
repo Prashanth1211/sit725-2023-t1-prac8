@@ -3,14 +3,14 @@ let router = express.Router();
 let controller = require('../controller/controller');
 
 router.post('/api/beaches', (req, res) => {
-    controller.createCat(req,res);
+    controller.createBeach(req,res);
 });
 
 router.get('/api/beaches',(req,res) => {
-    controller.getAllCats(req,res);
+    controller.getAllBeachs(req,res);
 });
 
 router.delete('/api/beaches',(req,res) => {
-    controller.deleteAllCats(req,res);
+    controller.deleteAllBeachs(req,res);
 });
 module.exports = router;

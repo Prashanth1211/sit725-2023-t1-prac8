@@ -1,6 +1,6 @@
 let model = require('../model/model');
 
-const createCat = (req,res) => {
+const createBeach = (req,res) => {
     let cat = req.body;
     model.insertCat(cat, (err, result) => {
         if (err) {
@@ -11,7 +11,7 @@ const createCat = (req,res) => {
     });
 }
 
-const getAllCats = (req,res) => {
+const getAllBeachs = (req,res) => {
     model.getAllCats((err, result) => {
         if (err) {
             res.json({statusCode: 400, message: err});
@@ -21,7 +21,7 @@ const getAllCats = (req,res) => {
     });
 }
 
-const deleteAllCats = (req, res) => {
+const deleteAllBeachs = (req, res) => {
     let cat = req.body;
     model.removeBeaches(cat, (err, result) => {
         if (err) {
@@ -32,4 +32,4 @@ const deleteAllCats = (req, res) => {
     });
 };
 
-module.exports = {createCat, getAllCats, deleteAllCats}
+module.exports = {createBeach, getAllBeachs, deleteAllBeachs}
